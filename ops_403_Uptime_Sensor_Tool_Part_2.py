@@ -44,8 +44,6 @@ def status_alert(sender_email_id, sender_email_id_password, prev_stat, current_s
     content = f"""
     At {current_time()} the status of host {host_ip} has changed from {prev_stat} to {current_stat}
     """
-    print(content)
-    # content = "test message"
     # sending the email
     s.sendmail("security@nowhere.com", sender_email_id, content)
     # Terminating session
