@@ -2,7 +2,7 @@
 
 # Script Name:                  Ops 401d8 Challenge 02
 # Author:                       David Prutch
-# Date of latest revision:      067/11/2023
+# Date of latest revision:      07/11/2023
 # Purpose:                      Transmit a single ICMP (ping) packet to a specific IP every two seconds.
 #                               Evaluate the response as either success or failure.
 #                               Assign success or failure to a status variable.
