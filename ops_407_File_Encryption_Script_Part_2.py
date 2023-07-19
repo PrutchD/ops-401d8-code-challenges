@@ -10,6 +10,7 @@
 
 # Import Libraries
 from cryptography.fernet import Fernet
+import os
 
 # Define Variables
 # initialize var to end loop
@@ -98,18 +99,18 @@ def decrypt_string(ciphertext):
     print(decrypted_data.decode())
 
 # Function to recursively encrypt files in a folder and its subfolders
-def recursively_encrypt_folder(folder_path, key):
+def recursively_encrypt_folder(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
-            encrypt_file(file_path, key)
+            encrypt_file(file_path)
 
 # Function to recursively decrypt files in a folder and its subfolders
-def recursively_decrypt_folder(folder_path, key):
+def recursively_decrypt_folder(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
-            decrypt_file(file_path, key)
+            decrypt_file(file_path)
 
 # Main 
 
