@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Script Name:                  Ops 401d8 Challenge 08
 # Author:                       David Prutch
 # Date of latest revision:      07/19/2023
