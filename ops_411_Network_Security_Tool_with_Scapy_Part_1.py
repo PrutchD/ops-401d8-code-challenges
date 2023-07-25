@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Ops 401d8 Challenge 07
+# Script Name:                  Ops 401d8 Challenge 11
 # Author:                       David Prutch
-# Date of latest revision:      07/18/2023
+# Date of latest revision:      07/24/2023
 # Purpose:                      In Python, create a TCP Port Range Scanner that tests whether a TCP port is open or closed. The script must:
 
                                 # Utilize the scapy library
@@ -22,7 +22,7 @@ host = "scanme.nmap.org"
 ports = (22, 23)
 # Define Functions
 def scan_port(host_address, port):
-    response = sr1(IP(dst=host) / TCP(dport=port, flags="S"), verbose=False, timeout=1)
+    response = sr1(IP(dst=host_address) / TCP(dport=port, flags="S"), verbose=False, timeout=1)
 
     if response.haslayer(TCP):
         if response.getlayer(TCP).flags == 0x12:  # SYN-ACK flag
