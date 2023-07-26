@@ -30,7 +30,7 @@ def scan_port(host_address, port):
 
     if response.haslayer(TCP):
         if response.getlayer(TCP).flags == 0x12:  # SYN-ACK flag
-            send_rst = sr1(IP(dst=host) / TCP(dport=port, flags="R"), verbose=False, timeout=1)
+            send_rst = sr1(IP(dst=host_address) / TCP(dport=port, flags="R"), verbose=False, timeout=1)
             print(f"Port {port} is OPEN.")
         elif response.getlayer(TCP).flags == 0x14:  # RST flag
             print(f"Port {port} is CLOSED.")
