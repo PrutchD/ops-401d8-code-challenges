@@ -1,9 +1,0 @@
-password
-password1
-password2
-password3
-silly
-funny
-whatever
-doitotit
-poopee
