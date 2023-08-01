@@ -17,6 +17,7 @@
 
 # Import Libraries
 import time
+from getpass import getpass
 
 # Define Variables
 
@@ -39,7 +40,7 @@ def offensive_mode():
 # Function for Defensive Mode: Password Recognized
 def defensive_mode():
     # Prompt user for input password string and word list file path
-    user_input = input("Enter a password string: ")
+    user_input = getpass("Enter a password string: ")
     word_list_path = input("Enter the word list file path: ")
     # Read the word list from the file
     with open(word_list_path, 'r') as file:
