@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Ops 401d8 Challenge 16
+# Script Name:                  Ops 401d8 Challenge 17
 # Author:                       David Prutch
-# Date of latest revision:      07/31/2023
+# Date of latest revision:      08/01/2023
 # Purpose:                      Mode 1: Offensive; Dictionary Iterator
 
                                 # Accepts a user input word list file path and iterates through the word list, assigning the word being read to a variable.
@@ -78,7 +78,8 @@ def ssh_brute_force():
             ssh_client.connect(ssh_ip, username=ssh_username, password=word)
 
             print(f"Login successful! Password found: {word}")
-            break  # Exit the loop if successful login
+            # Exit the loop if successful login
+            break 
         except paramiko.AuthenticationException:
             print(f"Login failed for password: {word}")
 # Main
@@ -102,6 +103,7 @@ while True:
         # Call ssh_brute_force function
         ssh_brute_force()
     elif mode == 4:
+        # Exit the loop
         break
     else:
         # Print an error message if an invalid mode number is entered
