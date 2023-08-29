@@ -2,7 +2,7 @@
 
 # Script Name:                  Ops 401d8 Challenge 36
 # Author:                       David Prutch
-# Date of latest revision:      08/23/2023
+# Date of latest revision:      08/28/2023
 # Purpose:                      Prompts the user to type a URL or IP address.
                                 # Prompts the user to type a port number.
                                 # Performs banner grabbing using netcat against the target address at the target port; prints the results to the screen then moves on to the step below.
