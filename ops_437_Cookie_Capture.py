@@ -41,7 +41,7 @@ def bringforthcookiemonster(): # Because why not!
 # Function to send the cookie and capture the HTTP response
 def send_cookie_and_capture_response():
     targetsite = "http://www.whatarecookies.com/cookietest.asp"
-    headers = {'Cookie': 'your_cookie_name=your_cookie_value'}  # Replace with your actual cookie details
+    headers = cookie 
 
     response = requests.get(targetsite, headers=headers)
     return response.text
@@ -50,6 +50,7 @@ def send_cookie_and_capture_response():
 def generate_html_file(content):
     with open('response.html', 'w') as f:
         f.write(content)
+        f.close()
 
 # Function to open the generated HTML file with Firefox
 # Make sure Firefox is the default browser
